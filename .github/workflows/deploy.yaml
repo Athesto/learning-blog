@@ -6,6 +6,7 @@ on:
 
 jobs:
   deploy:
+    environment: Prod
     permissions:
       id-token: write
       contents: read
