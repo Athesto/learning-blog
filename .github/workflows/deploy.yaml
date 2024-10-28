@@ -25,7 +25,8 @@ jobs:
 
       - name: Check if AWS_ACCESS_KEY_ID is accessible
         shell: bash
-        env: { AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }} }
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         run: echo "AWS_ACCESS_KEY_ID is accessible"
 
       - name: Configure AWS credentials
