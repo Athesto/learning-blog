@@ -1,9 +1,4 @@
 name: Deploy to S3
-
-permissions:
-  id-token: write
-  contents: read
-
 on:
   push:
     branches:
@@ -11,6 +6,10 @@ on:
 
 jobs:
   deploy:
+    permissions:
+      id-token: write
+      contents: read
+
     runs-on: ubuntu-latest
 
     steps:
