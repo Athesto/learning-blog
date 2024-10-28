@@ -13,11 +13,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Install dependencies
+      - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
           version: 9
-        run: pnpm run build
+
+      - name: Install dependencies and build
+        run: |
+          pnpm install
+          pnpm run build
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
