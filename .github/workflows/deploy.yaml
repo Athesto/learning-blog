@@ -33,6 +33,7 @@ jobs:
         run: |
           echo "$AWS_ACCESS_KEY_ID is accessible"
           echo "Github Token ${{secrets.GITHUB_TOKEN}}"
+          echo "FOOBAR: ${{secrets.FOOBAR}}"
           if [ -z "${{ secrets.AWS_ACCESS_KEY_ID }}" ]; then
             echo "AWS_ACCESS_KEY_ID is not available"
             exit 1
